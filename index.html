@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+
+<video loop id="myVideo">
+  <source src="./assets/video/movie.mp4" type="video/mp4">
+  Your browser does not support HTML5 video.
+</video>
+
+<div class="content">
+    <h1>Partilhar</h1>
+    <button id="myBtn" onclick="playVideo()">Play</button>
+    <p>Video: <a class="link" target="_blank" href="https://www.youtube.com/channel/UCGsfdXrWy-ZgVBm9DpjvKgA">puuung</a> </p>
+    <p>Música: Partilhar - <a class="link" target="_blank" href="https://open.spotify.com/artist/0slVGXBggrLglTLNKbeEyW">Rubel</a></p>
+</div>
+
+<script>
+var video = document.getElementById("myVideo");
+var btn = document.getElementById("myBtn");
+
+function playVideo() {
+  if (video.paused) {
+    video.play();
+    btn.innerHTML = "Pause";
+  } else {
+    video.pause();
+    btn.innerHTML = "Play";
+  }
+}
+</script>
+
+</body>
+</html>
